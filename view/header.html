@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            锋速小卖部
+        </title>
+        <link href="//apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="/js/lib/jquery-2.1.1.min.js">
+        </script>
+        <script src="/js/lib/template_art.js">
+        </script>
+        <script src="/js/lib/common.min.js">
+        </script>
+    </head>
+    <body class="container">
+        <h1>
+            <a href="/">
+                锋速小卖部
+            </a>
+        </h1>
+        {{if session&&session.admin_id}}
+        <div class="pull-right">
+            欢迎您:
+            <b>
+                管理员
+            </b>
+            <a href="/logout" class="btn btn-sm btn-warning">退出登陆</a>
+        </div>
+        {{/if}}
+        <div class="clearfix">
+        </div>
+        <nav class="navbar navbar-default" role="navigation">
+            <div>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/index">
+                            简报
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/order">
+                            订单管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/article">
+                            文章管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/category">
+                            分类管理
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/user">
+                            用户管理
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </body>
+</html>

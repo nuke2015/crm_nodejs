@@ -1,0 +1,30 @@
+{{include './header'}}
+<h3>
+    管理员登陆
+</h3>
+<form action="/login_check" method="post">
+<table class="table table-striped table-bordered">
+    <tr>
+        <td>
+            用户名:
+        </td>
+        <td>
+        <input type="text" name="uname" value="">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            密码:
+        </td>
+        <td>
+        <input type="password" name="passwd" value="">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="登陆" class="btn btn-primary" />
+        </td>
+    </tr>
+</table>
+</form>
+{{include './footer'}}

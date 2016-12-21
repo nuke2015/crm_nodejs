@@ -1,0 +1,23 @@
+{
+  "name": "m.jjys168.com",
+  "main": "index.js",
+  "version": "2016.06.19",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "art-template": "^3.0.3",
+    "body-parser": "^1.15.2",
+    "cacheman": "^2.2.1",
+    "cacheman-redis": "^1.1.2",
+    "compression": "^1.6.2",
+    "cookie-session": "^2.0.0-alpha.2",
+    "crypto": "^0.0.3",
+    "express": "^4.14.0",
+    "jqtpl": "2.0.16-rc1",
+    "memory-cache": "^0.1.6",
+    "orm": "^3.2.2",
+    "request": "*"
+  }
+}
