@@ -2,11 +2,11 @@
 exports.init = function() {
     var action = require("./" + this.turl + 'Action.js');
     // 反向注入
-    action.base = this;
+    this.index = action.index;
     console.info('base route init ok!');
-    action.index(this.req, this.res);
+    this.index(this.req, this.res);
 };
-// 统一渲染
+// 统一渲染,注入框架数据
 exports.render = function(tpl, data) {
     // 补充字段
     data.session = this.req.session;

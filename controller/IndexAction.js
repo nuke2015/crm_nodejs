@@ -1,5 +1,6 @@
 exports.index = function(req, res) {
+    // console.log(this);
     // 登陆判断
-    var admin_id = this.base.admin_id();
-    this.base.render('index_index', {});
+    var admin_id = this.admin_id();
+    this.render('index_index', {});
 };

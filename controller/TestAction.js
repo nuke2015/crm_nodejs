@@ -1,5 +1,5 @@
 exports.index = function(req, res) {
-    this.base.tip(0, '操作失败!');
+    this.tip(0, '操作失败!');
     var fs_user = require(PATH_ROOT + '/model/fs_user');
     fs_user.model(function(m) {
         m.find({
