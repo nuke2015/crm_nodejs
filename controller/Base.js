@@ -1,10 +1,24 @@
+// 这是基类,被相关模块继承
 // 回路绑定
-exports.init = function() {
-    var action = require("./" + this.turl + 'Action.js');
-    // 反向注入
+exports.init = function(turl, req, res) {
+    var action = require("./" + turl + 'Action.js');
+    // 基类绑定
+    this.turl = turl;
+    this.req = req;
+    this.res = res;
+    // 反向原型注入
     this.index = action.index;
-    console.info('base route init ok!');
-    this.index(this.req, this.res);
+    console.info('navto: ----> ' + turl);
+    this.index(req, res);
+};
+// 登陆判断
+exports.login_check = function(cb) {
+    if (this.req.session.admin_id) {
+        var admin_id = this.req.session.admin_id;
+        cb(admin_id);
+    } else {
+        this.redirect('/login');
+    }
 };
 // 统一渲染,注入框架数据
 exports.render = function(tpl, data) {
@@ -13,15 +27,6 @@ exports.render = function(tpl, data) {
     data.cookie = this.req.cookie;
     console.log(data);
     this.res.render(tpl, data);
-};
-// 这是基类,被相关模块继承,使用require('./base.js');
-exports.admin_id = function() {
-    if (this.req.session.admin_id) {
-        var admin_id = this.req.session.admin_id;
-        return admin_id;
-    } else {
-        this.redirect('/login');
-    }
 };
 // 登陆跳转
 exports.redirect = function(turl) {

@@ -42,4 +42,6 @@ https://github.com/cayasso/cacheman
 放弃使用jugglingdb操作mysql,因为在field字段的时候,自动加了引号,在where条件查询的时候,不自动加引号,count函数的时候,一直报错.
 改用orm2这货的链式语法很刁.
 
+2016年12月22日 11:10:56
+this不能在回调中使用,在外围定义var that=this就好了.
 

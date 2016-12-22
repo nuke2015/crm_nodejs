@@ -14,11 +14,7 @@ module.exports = function(app) {
         var turl = '/' + ctrl.substring(0, ctrl.length - 9).toLowerCase();
         console.log('  ' + turl);
         app[method](turl, function(req, res) {
-            // 路由冗余
-            base.req = req;
-            base.res = res;
-            base.turl = turl;
-            base.init();
+            base.init(turl, req, res);
         });
     });
 }
