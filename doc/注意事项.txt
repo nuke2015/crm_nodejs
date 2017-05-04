@@ -1,0 +1,16 @@
+
+2017年5月4日 11:14:54
+单控制器单方法
+比如/hello对应controller/HelloAction.js/index
+比如/test对应controller/TestAction.js/index
+这样做可以避免业务前端逻辑的交叉污染.
+
+2017年5月4日 11:18:52
+那如果要互相调用怎么办呢?可以require相对应的控制器,然后实例化调用.
+/other
+比如有个OtherAction需要完全复用HelloAction中的逻辑
+exports.index = function(req, res) {
+    var HelloAction = require(__dirname + '/HelloAction.js');
+    HelloAction.index();
+};
+
