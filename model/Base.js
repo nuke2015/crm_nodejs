@@ -1,7 +1,7 @@
 // model基类,被相关模块继承,使用require('./base.js');
 // 数据库相关操作
 var orm = require("orm");
-exports.conf = "mysql://root:@127.0.0.1/fengshop";
+exports.conf = "mysql://root:root@127.0.0.1/fengshop";
 exports.table_name = "";
 exports.define = {};
 var dbc = {};
@@ -10,6 +10,7 @@ exports.connect = function(cb) {
     var table_name = this.table_name;
     var data = this.define;
     orm.connect(this.conf, function(err, db) {
+        console.log('mysql conn ok!',err);
         // 单例模式
         dbc = db;
         cb(db);
