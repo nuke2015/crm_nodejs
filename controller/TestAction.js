@@ -1,13 +1,13 @@
 exports.index = function(req, res) {
-    this.tip(0, '操作失败!');
-    var fs_user = require(PATH_ROOT + '/model/fs_user');
-    fs_user.model(function(m) {
-        m.find({
-            uname: 'admin'
-        }, function(err, data) {
-            console.log(err, data);
-        });
-    });
+    res.send('test ok');
+    // var fs_user = require(PATH_ROOT + '/model/fs_user');
+    // fs_user.model(function(m) {
+    //     m.find({
+    //         uname: 'admin'
+    //     }, function(err, data) {
+    //         console.log(err, data);
+    //     });
+    // });
     // var hello = require(PATH_ROOT + '/model/hello');
     // // 添加
     // // hello.model(function(model) {
