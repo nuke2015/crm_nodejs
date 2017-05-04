@@ -1,7 +1,8 @@
 var fs = require('fs');
 var base = require(PATH_ROOT + '/controller/Base');
 module.exports = function(app) {
-    console.log("route and controller-->");
+    console.info(new Date().toLocaleString());
+    console.log("routes:");
     // 补充路由
     app.get('/', function(req, res) {
         res.redirect('/index');
