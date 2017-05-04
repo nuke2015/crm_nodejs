@@ -1,4 +1,8 @@
 
+第一步
+导入mysql数据库docs/fengshop.sql,
+修改model/base.js中的数据库连接
+
 cnpm install
 2016年12月20日 11:15:27
 cnpm install pm2 -g
