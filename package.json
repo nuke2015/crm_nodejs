@@ -17,6 +17,7 @@
     "express": "^4.14.0",
     "jqtpl": "2.0.16-rc1",
     "memory-cache": "^0.1.6",
+    "mysql": "^2.13.0",
     "orm": "^3.2.2",
     "request": "*"
   }
